@@ -1,15 +1,14 @@
 {
-  "name": "swift-viper-module",
-  "version": "0.1.0",
-  "description": "Generate swift viper module",
+  "name": "viper-module-generator",
+  "version": "1.0.2",
+  "description": "Generate viper module",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
   "author": "Eduard Khachatryan <contact@edunse.com> (https://edunse.com)",
   "license": "ISC",
-  "devDependencies": {},
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/edunse/viper-module-generator.git"
+  },
   "dependencies": {
     "colors": "^1.4.0"
   }
