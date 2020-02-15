@@ -1,6 +1,7 @@
 /*
 
 !/templates
+!/bin
 !index.js
 !.gitignore
 !package.json

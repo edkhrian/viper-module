@@ -1,6 +1,6 @@
 {
   "name": "viper-module-generator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Generate viper module",
   "main": "index.js",
   "author": "Eduard Khachatryan <contact@edunse.com> (https://edunse.com)",
@@ -11,5 +11,9 @@
   },
   "dependencies": {
     "colors": "^1.4.0"
-  }
+  },
+  "bin": {
+    "vmg": "./bin/vmg.js"
+  },
+  "preferGlobal": true
 }
