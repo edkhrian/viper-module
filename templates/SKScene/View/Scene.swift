@@ -1,6 +1,6 @@
 import SpriteKit
 
-class $MODULE$Scene: $MODULE$ViewInput, SKScene {
+class $MODULE$Scene: SKScene, $MODULE$ViewInput {
     var output: $MODULE$ViewOutput!
 
     override func sceneDidLoad() {

@@ -11,7 +11,7 @@ class $MODULE$Configurator {
         presenter.view = view
         presenter.router = router
         presenter.interactor = interactor
-        router.viewController = view
+        router.scene = view
         interactor.output = presenter
         presenter.moduleOutput = onConfig?(presenter)
 
