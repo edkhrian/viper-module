@@ -5,8 +5,4 @@ class {{ module.name }}Presenter {
     var router: {{ module.name }}RouterInput!
     var interactor: {{ module.name }}InteractorInput!
     var moduleOutput: {{ module.name }}ModuleOutput?
-
-    func viewIsReady() {
-
-    }
 }
