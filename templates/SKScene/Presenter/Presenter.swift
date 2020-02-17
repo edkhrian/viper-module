@@ -1,14 +1,12 @@
 import Foundation
 
-class $MODULE$Presenter: $MODULE$ViewOutput, $MODULE$InteractorOutput, $MODULE$ModuleInput {
-    weak var view: $MODULE$ViewInput!
-    var router: $MODULE$Router!
-    var interactor: $MODULE$InteractorInput!
-    var moduleOutput: $MODULE$ModuleOutput?
+class {{ module.name }}Presenter {
+    weak var view: {{ module.name }}ViewInput!
+    var router: {{ module.name }}RouterInput!
+    var interactor: {{ module.name }}InteractorInput!
+    var moduleOutput: {{ module.name }}ModuleOutput?
 
-    // MARK: - $MODULE$ViewOutput
+    func viewIsReady() {
 
-    // MARK: - $MODULE$InteractorOutput
-
-    // MARK: - $MODULE$ModuleInput
+    }
 }

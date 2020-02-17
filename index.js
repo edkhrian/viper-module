@@ -1,5 +1,6 @@
+require('colors');
 const fs = require('fs');
-const colors = require('colors');
+const handlebars = require("handlebars");
 
 const templates = readUnhiddenFilesAndFolders(__dirname + '/templates');
 
@@ -12,7 +13,7 @@ if (!process.argv[3]) return console.log('Module name not set'.red);
 const templateName = process.argv[2];
 const moduleName = process.argv[3];
 const moduleFolder = process.cwd() + '/' + moduleName;
-const templateFolder = __dirname + '/templates/' + (templateName);
+const templateFolder = __dirname + '/templates/' + templateName;
 
 console.log(`Template: ${templateName.bold}`.blue);
 
@@ -32,9 +33,17 @@ Promise
                         console.log(`File exists: ${componentFolder + '/' + distFileName}`.red);
                     } else {
                         const fileContent = fs
-                            .readFileSync(templateFolder + '/' + componentName + '/' + fileName, 'utf8')
-                            .replace(new RegExp('\\$MODULE\\$', 'g'), moduleName);
-                        fs.writeFileSync(componentFolder + '/' + distFileName, fileContent, 'utf8');
+                            .readFileSync(templateFolder + '/' + componentName + '/' + fileName, 'utf8');
+                        const template = handlebars.compile(fileContent);
+
+                        fs.writeFileSync(
+                            componentFolder + '/' + distFileName,
+                            template({
+                                module: {
+                                    name: moduleName
+                                }
+                            }),
+                            'utf8');
                         console.log(`File created: ${componentFolder + '/' + distFileName}`.green);
                     }
                 });

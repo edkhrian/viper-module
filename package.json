@@ -6,11 +6,12 @@
   "author": "Eduard Khachatryan <contact@edunse.com> (https://edunse.com)",
   "license": "ISC",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/edunse/viper-module-generator.git"
+    "type": "git",
+    "url": "https://github.com/edunse/viper-module-generator.git"
   },
   "dependencies": {
-    "colors": "^1.4.0"
+    "colors": "^1.4.0",
+    "handlebars": "^4.7.3"
   },
   "bin": {
     "vmg": "./bin/vmg.js"
