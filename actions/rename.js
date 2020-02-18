@@ -2,26 +2,33 @@ const fs = require('fs');
 const { readUnhiddenFilesAndFolders, rename } = require('../helpers');
 
 module.exports = function (prevName, newName) {
-    const modulePath = process.cwd() + '/' + prevName;
+    let modulePath = process.cwd() + '/' + prevName;
     const newModulePath = process.cwd() + '/' + newName;
 
     if (!fs.existsSync(modulePath)) {
-        return console.log(`No folder ${prevName}`.red)
+        modulePath = newModulePath;
     }
     rename(modulePath, newModulePath);
 
     readUnhiddenFilesAndFolders(newModulePath)
         .forEach((componentName) => {
             const componentPath = newModulePath + '/' + componentName;
-            const files = readUnhiddenFilesAndFolders(componentPath).filter(name => /\.\w+/.test(name));
+            const files = readUnhiddenFilesAndFolders(componentPath).filter(name => /\.\w+$/.test(name));
 
             files.forEach(fileName => {
                 const newFilePath = componentPath + '/' + fileName.replace(prevName, newName);
                 rename(componentPath + '/' + fileName, newFilePath);
 
-                const content = fs
-                    .readFileSync(newFilePath, 'utf8')
-                    .replace(new RegExp(`(\\s|\\()${prevName}`, 'g'), `$1${newName}`);
+                let content = fs.readFileSync(newFilePath, 'utf8');
+                [
+                    'Presenter', 'Interactor', 'Router',
+                    'Configurator', 'Module',
+                    'Scene', 'Node', 'View', 'Cell'
+                ].forEach(suffix => {
+                    content = content.replace(
+                        new RegExp(`(\\s|\\()${prevName}${suffix}`, 'g'),
+                        `$1${newName}${suffix}`)
+                });
 
                 fs.writeFileSync(newFilePath, content, 'utf8');
             });
