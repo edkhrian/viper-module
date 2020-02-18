@@ -1,13 +1,14 @@
 {
   "name": "viper-module",
-  "version": "1.0.0",
-  "description": "Viper module helper",
+  "version": "1.0.1",
+  "description": "Viper module tools",
   "main": "index.js",
   "author": "Eduard Khachatryan <contact@edunse.com> (https://edunse.com)",
   "license": "ISC",
   "scripts": {
     "start": "node index SKScene Main"
   },
+  "keywords": ["viper", "swift", "module", "viper module"],
   "repository": {
     "type": "git",
     "url": "https://github.com/edunse/viper-module.git"
