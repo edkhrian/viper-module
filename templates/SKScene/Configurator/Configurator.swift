@@ -1,6 +1,6 @@
 import SpriteKit
 
-class {{ module.name }}Configurator {
+class {{ module.name }}ModuleConfigurator {
     static func createModule(_ onConfig: (({{ module.name }}ModuleInput) -> {{ module.name }}ModuleOutput?)? = nil) -> SKScene {
         let view = {{ module.name }}Scene()
         let presenter = {{ module.name }}Presenter()

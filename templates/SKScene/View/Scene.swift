@@ -1,6 +1,6 @@
 import SpriteKit
 
-class {{ module.name }}Scene: SKScene {
+class {{ module.name }}Scene: SKScene, {{ module.name }}ViewInput {
     var output: {{ module.name }}ViewOutput!
 
     override func sceneDidLoad() {
@@ -9,7 +9,12 @@ class {{ module.name }}Scene: SKScene {
 
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-
         output.viewIsReady()
+    }
+
+    // MARK: - {{ module.name }}ViewInput
+
+    func setupInitialState() {
+
     }
 }
