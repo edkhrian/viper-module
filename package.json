@@ -1,6 +1,6 @@
 {
   "name": "viper-module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Viper module tools",
   "main": "index.js",
   "author": "Eduard Khachatryan <contact@edunse.com> (https://edunse.com)",

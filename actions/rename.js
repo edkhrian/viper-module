@@ -13,7 +13,7 @@ module.exports = function (prevName, newName) {
     readUnhiddenFilesAndFolders(newModulePath)
         .forEach((componentName) => {
             const componentPath = newModulePath + '/' + componentName;
-            const files = fs.readdirSync(componentPath);
+            const files = readUnhiddenFilesAndFolders(componentPath).filter(name => /\.\w+/.test(name));
 
             files.forEach(fileName => {
                 const newFilePath = componentPath + '/' + fileName.replace(prevName, newName);
