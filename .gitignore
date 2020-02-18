@@ -5,3 +5,4 @@ package-lock.json
 # test compile modules
 Main/
 Field/
+Test/
