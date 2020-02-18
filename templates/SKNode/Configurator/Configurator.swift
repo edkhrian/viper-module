@@ -7,7 +7,7 @@ class {{ module.name }}ModuleConfigurator {
         let interactor = {{ module.name }}Interactor()
         let router = {{ module.name }}Router()
 
-        view.output = presenter
+        node.output = presenter
         presenter.view = node
         presenter.router = router
         presenter.interactor = interactor
