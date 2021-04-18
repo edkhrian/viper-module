@@ -18,4 +18,4 @@ vm rename Menu Start
 ```
 
 
-Currently available templates: **SKScene**, **SKNode**
+Currently available templates: **UIViewController**, **SKScene**, **SKNode**
