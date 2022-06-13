@@ -1,12 +1,12 @@
 {
-  "name": "viper-module",
+  "name": "@edunse/viper-module",
   "version": "1.0.5",
   "description": "Viper module tools",
   "main": "index.js",
-  "author": "Eduard Khachatryan <contact@edunse.com> (https://edunse.com)",
+  "author": "Eduard Khachatrian <contact@edunse.com> (https://edunse.com)",
   "license": "ISC",
   "scripts": {
-    "start": "node index create Main SKNode"
+    "dev": "node index create Main SKNode"
   },
   "keywords": [
     "viper",
