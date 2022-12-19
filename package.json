@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "Viper module tools",
   "main": "index.js",
-  "author": "Eduard Khachatrian <contact@edkhrian.com>",
+  "author": "Eduard Khachatrian",
   "license": "ISC",
   "scripts": {
     "dev": "node index create Main SKNode"
