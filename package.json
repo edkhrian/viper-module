@@ -1,9 +1,9 @@
 {
-  "name": "@edunse/viper-module",
+  "name": "@edkhrian/viper-module",
   "version": "1.1.0",
   "description": "Viper module tools",
   "main": "index.js",
-  "author": "Eduard Khachatrian <contact@edunse.com> (https://edunse.com)",
+  "author": "Eduard Khachatrian <contact@edkhrian.com>",
   "license": "ISC",
   "scripts": {
     "dev": "node index create Main SKNode"
@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/edunse/viper-module.git"
+    "url": "https://github.com/edkhrian/viper-module.git"
   },
   "dependencies": {
     "colors": "^1.4.0",
